@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>CAFÉ EXPRESSO - COMPRAS</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Alice Alves e Alice Gomes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="cafe,delicias,capuccino"/>
+    <meta name="description" content="cafeteria"/>
+    <link rel="stylesheet" type="text/css" href="css/sitecafe_p1.css"/>
+    <link rel="icon" type="image/png" href="img/Default_Marrom_Caf_4A2C2A_Principalmente_para_a_xcara_de_caf_e_2 (1).jpg">
+    <style>
+
+        .error-msg { color: red; }
+        .erro { margin-top: 10px; } 
+        
+    </style>
+</head>
+<body style="background: #4A2C2A;">
+    <h1 id="cafe-expresso-txt-h1" style="text-align: center; color:#fff;">CAFÉ EXPRESSO</h1>
+
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <form id="form-cafe">
+                    <fieldset>
+                        <legend style="padding-bottom: 20px;">Dados de Identificação</legend>
+                        <div style="text-align:left;">
+                            <label for="nome">Nome:</label>
+                            <input id="nome" type="text" name="nome_completo" size="80" placeholder="Digite seu nome completo" required autofocus /><br/>
+
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" required><br/>
+
+                            <label for="cpf">CPF:</label>
+                            <input type="text" autocomplete="off" id="cpf" placeholder="Digite seu CPF" name="cpf" oninput="verificarCPF()" required>
+                            <span id="error-msg" class="error-msg"></span> 
+                            <span id="cpfInvalidCharError" class="error-msg"></span> 
+                            <br>
+
+                            <label for="endereco">Endereço:</label>
+                            <input id="endereco" type="text" name="endereco" size="80" required/><br/>
+
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" name="email" placeholder="nomeusuario@email.com" required />
+                        </div>
+                    </fieldset>
+
+                    <fieldset> 
+                        <legend style="padding-bottom: 20px;">Produtos</legend>
+                        <div style="text-align:left;">
+                            <label for="maquinas">Máquinas:</label>
+                            <select name="maquinas" id="maquinas" onchange="atualizarLista()" required> 
+                                <option value="">Selecione</option>
+                                <option value="499.00">Quadrante - R$499,00</option>
+                                <option value="299.00">Mini Me - R$299,00</option>
+                                <option value="349.00">Inissia com Aeroccino - R$349,00</option>
+                                <option value="1299.00">Lattissima Touch - R$1299,00</option>
+                            </select> 
+
+                            <label for="saches">Sachês:</label>
+                            <select name="saches" id="saches" onchange="atualizarLista()" required>  
+                                <option value="">Selecione</option> 
+                                <option value="20.00">Livantto - R$20,00</option>
+                                <option value="25.00">Vanilio - R$25,00</option>
+                                <option value="15.00">Ristretto - R$15,00</option>
+                                <option value="10.00">Classico - R$10,00</option>
+                                <option value="30.00">Intenso - R$30,00</option>
+                            </select> 
+
+                            <div style="display:flex; justify-content: space-between;">
+                                <label for="selecionados">Selecionados:</label>
+                                <textarea id="selecionados" name="selecionados" cols="40" rows="4" readonly></textarea>
+                            </div>
+                            <label for="valor">Valor:</label>
+                            <input type="text" id="valor" name="valor" readonly><br> 
+                        </div>
+                    </fieldset> 
+
+                    <fieldset style="background-color: #4A2C2A; padding: 20px;">
+                        <legend style="color: #381307; text-align: center; padding-bottom: 50px;">Forma de Pagamento</legend>
+                        <label style="color:white;">
+                            <input type="radio" name="pagamento" value="cartao" checked required> Cartão
+                        </label>
+                        <label style="color: white;">
+                            <input type="radio" name="pagamento" value="cheque" required> Cheque
+                        </label>
+                        <label style="color: white;">
+                            <input type="radio" name="pagamento" value="dinheiro" required> Dinheiro
+                        </label>
+
+                    <div class="cartoes">
+                        <legend style="color: white; text-align:left;">Dados do Cartão:</legend>
+                        <input type="radio" name="bandeira" value="visa" id="visa">
+                        <label for="visa"><img src="img/visa.png" alt="Visa"></label>
+
+                        <input type="radio" name="bandeira" value="master" id="master">
+                        <label for="master"><img src="img/master.png" alt="MasterCard"></label>
+
+                        <input type="radio" name="bandeira" value="amex" id="amex">
+                        <label for="amex"><img src="img/amex.png" alt="American Express"></label>
+                    </div>
+
+                    <label for="validade" style="color: #fff;">Validade:</label>
+                    <input type="text" id="validade" name="validade" placeholder="MM/AA" required><br>
+
+                    <div class="erro">
+                        <label for="numero" style="color: #fff;">Número:</label>
+                        <input type="text" id="numero" name="numero" required>
+                        <span id="card-error-msg" class="error-msg" style="color: red;"></span>
+                    </div>
+                </fieldset>
+
+
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <button onclick="window.location.href='index.html'">Voltar para Home</button>
+    </div>
+
+    <footer class="rodape">
+        <p>Desenvolvido por <b>Alice Alves/ Alice Gomes</b> - 2024 &copy;</p>
+    </footer>
+<script src="js/cpf.js"></script>
+<script src="/js/lista.js"></script>
+<script src="/js/verificarbandeira.js"></script>
+
+
+<script>
+
+    document.getElementById('form-cafe').addEventListener('submit', function(event) {
+    verificarCPF();
+    validarNumero();
+
+    const cpfValido = validaCPF(document.getElementById('cpf').value);
+    const numeroValido = document.getElementById('card-error-msg').textContent === '';
+
+    if (!cpfValido || !numeroValido) {
+        event.preventDefault();
+        alert('Por favor, corrija os erros no formulário antes de enviar.');
+    }
+});
+        function atualizarLista() {
+        const maquinas = document.getElementById('maquinas');
+        const saches = document.getElementById('saches');
+        const selecionados = document.getElementById('selecionados');
+        const valor = document.getElementById('valor');
+
+        let lista = '';
+        let total = 0;
+
+        
+        if (maquinas.value) {
+            lista += `Máquina: ${maquinas.options[maquinas.selectedIndex].text}\n`;
+            total += parseFloat(maquinas.value);
+        }
+
+        
+        if (saches.value) {
+            lista += `Sachê: ${saches.options[saches.selectedIndex].text}\n`;
+            total += parseFloat(saches.value);
+        }
+
+        selecionados.value = lista;
+        valor.value = `R$${total.toFixed(2)}`;
+    }
+
+
+    function limparFormulario() {
+        const form = document.getElementById('form-cafe');
+        form.reset(); 
+
+
+        document.getElementById('selecionados').value = '';
+        document.getElementById('valor').value = '';
+    }
+
+    
+    document.querySelector('button[type="reset"]').addEventListener('click', function(event) {
+        limparFormulario();
+    });
+
+    </script>
+</body>
+</html>

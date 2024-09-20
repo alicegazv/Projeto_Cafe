@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F0EB;
+    font-family: 'Playfair Display', serif;
+}
+
+main, img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+#imagem-home {
+    width: 54%;
+}
+
+.container-home {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cafe-expresso-txt-h1 {
+    padding: 15px;
+    font: 1.5rem 'Playfair Display', serif;
+    color: #4A2C2A;
+    text-align: left;
+}
+
+.lista-pag {
+    margin-left: 20px;
+}
+
+.lista-pag ul {
+    padding-top: 150px;
+    list-style: none;
+}
+
+.lista-pag a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #4A2C2A;
+    text-decoration: none;
+}
+
+.lista-pag li {
+    margin: 20px;
+    text-align: left;
+}
+
+.a-menu {
+    margin-right: 40px;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.a-menu:link,
+.a-menu:visited {
+    color: #505D68;
+}
+
+.a-menu:hover,
+.a-menu:active {
+    color: #4A2C2A;
+}
+
+/* footer */
+.rodape {
+    background-color: #662816;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.rodape-home{
+    background-color: #662816;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    bottom: 0;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape b {
+    font-weight: bold;
+}
+
+/*botão Home*/
+button {
+    background-color: #381307;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button .bt-compras{
+    background-color: #381307;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #a15a45;
+}
+
+/*Pagina historias*/
+#txt-historias-h2 {
+    text-align: center;
+    margin-top: 40px;
+    font: 1.8rem 'Playfair Display', serif;
+    color: #4A2C2A;
+    margin-bottom: 30px;
+}
+
+#imagem-historia {
+    width: 1090px;
+    border-radius: 30px;
+}
+
+.container-historia {
+    display: flex;
+    background: #4A2C2A;
+    margin-top: 50px;
+    border-radius: 121px 0px 0px 121px;
+}
+
+.container-historia p {
+    color: #fff;
+    margin: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    text-align: left;
+}
+
+#txt-historias-p2 {
+    text-align: right;
+}
+
+/*Pagina Maquinas*/
+.nome-maquinas {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    font: 1.5rem 'Playfair Display', serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    margin: 15px;
+    font-size: 1rem;
+    color: #505D68;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card a:link {
+    color: #573218;
+    text-decoration: none; 
+}
+
+.card a:visited {
+    color: #662222; 
+}
+
+.card a:hover {
+    color: #b45f3c; 
+}
+
+
+.card a:active {
+    color: #3b2a1f;
+}
+
+
+/*Pagina Sache*/
+
+/* Form CSS */
+.container {
+    background-color: #4d2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-container {
+    background-color: #f7f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #4d2a2a;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    margin-bottom: 10px;
+    color: #4d2a2a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea
+ {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea, select {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.maquinas-tipos{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ 
+ 
+textarea {
+    height: 50px;
+}
+
+button[type="button"],
+button[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d2a2a;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="button"],
+button[type="submit"] .bt-compras {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d2a2a;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button[type="button"] {
+    background-color: #ccc;
+    color: #4d2a2a;
+}
+
+button[type="button"] .bt-compras {
+    background-color: #ccc;
+    color: #4d2a2a;
+}
+
+button[type="submit"] {
+    background-color: #4d2a2a;
+}
+
+button[type="submit"] .bt-compras {
+    background-color: #4d2a2a;
+}
+
+/* Formas de Pagamento */
+.cartoes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.cartoes img {
+    width: 50px;
+    height: auto;
+}
+
+body, button{
+    text-align: center;
+} 
+input {
+    border: 1px solid #ccc; /* Por exemplo, isso deve ser o padrão para todos os inputs */
+}
+
+#numero {
+    border: 1px solid #ccc; /* Certifique-se de que esta é a borda padrão */
+}
+
+/* Regra de erro específica */
+.input-error {
+    border: 2px solid red;
+}
+ 
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 280px;
+    max-width: 90%;
+    max-height: 530px;
+    overflow-y: auto;
+    background-color: #4d2a1f;
+    color: #ffff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-produtos{
+    list-style-type: none;
+}
+
+#modal-title{
+    margin-bottom: 10px;
+}
+
+/*mensagens de erro*/
+
+#error-msg{
+    font: 0.7rem 'Playfair Display', serif;
+    padding-left: 100px;
+    color: red;
+}
+
+#cpfInvalidCharError{
+    font: 0.7rem 'Playfair Display', serif;
+    padding-left: 100px;
+    color: red;
+}
+
+#card-error-msg{
+    font: 0.7rem 'Playfair Display', serif;
+    padding-left: 100px;
+    color: red;
+}
+
+option{
+    font: 0.8rem 'Playfair Display', serif;
+}
+
+textarea{
+    font: 0.8em 'Playfair Display', serif;
+}
+
+input{
+        font: 0.8em 'Playfair Display', serif;
+}
